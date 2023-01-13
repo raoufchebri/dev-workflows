@@ -32,13 +32,9 @@ jobs:
           PROJECT_ID: ${{ secrets.NEON_PROJECT_ID }}
           API_KEY: ${{ secrets.NEON_API_KEY }}
           SHA: ${{ steps.get_sha.outputs.sha }}
-
-      - name: Delete Neon Branch
-        uses: neondatabase/delete-branch-action@v2
-        with:
-          project_id: ${{ secrets.NEON_PROJECT_ID }}
-          branch_id: ${{ steps.get_branch_id.outputs.branch_id }}
-          api_key: ${{ secrets.NEON_API_KEY }}
+          
+      - name: Checkout code
+        uses: actions/checkout@v2
       
       - name: Run Prisma Migrate
         run: |
@@ -59,3 +55,10 @@ jobs:
           vercel build --token=${{ secrets.VERCEL_TOKEN }}
           preview_url=$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})
           echo "preview_url=${preview_url}" >> $GITHUB_OUTPUT
+          
+      - name: Delete Neon Branch
+        uses: neondatabase/delete-branch-action@v2
+        with:
+          project_id: ${{ secrets.NEON_PROJECT_ID }}
+          branch_id: ${{ steps.get_branch_id.outputs.branch_id }}
+          api_key: ${{ secrets.NEON_API_KEY }}
