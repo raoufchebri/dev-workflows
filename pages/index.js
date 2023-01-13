@@ -8,7 +8,7 @@ export const getServerSideProps = async () => {
 const Home = ({ shoes }) => {
   return (
     <div className='p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
-      {/* {shoes &&
+      {shoes &&
         shoes.map((shoe) => (
           <div key={shoe.id} className='rounded shadow-lg h-full relative'>
             <img
@@ -23,7 +23,7 @@ const Home = ({ shoes }) => {
               <p className='text-gray-700 text-base'>{shoe.description}</p>
             </div>
           </div>
-        ))} */}
+        ))}
     </div>
   );
 };
