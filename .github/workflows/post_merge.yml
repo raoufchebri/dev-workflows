@@ -39,8 +39,8 @@ jobs:
       - name: Run Prisma Migrate
         run: |
           touch .env
-          echo DATABASE_URL=${secrets.DATABASE_URL} >> .env
-          echo SHADOW_DATABASE_URL=${secrets.SHADOW_DATABASE_URL} >> .env
+          echo DATABASE_URL=${{secrets.DATABASE_URL}} >> .env
+          echo SHADOW_DATABASE_URL=${{secrets.SHADOW_DATABASE_URL}} >> .env
           npx prisma generate
           npx prisma migrate dev
       
