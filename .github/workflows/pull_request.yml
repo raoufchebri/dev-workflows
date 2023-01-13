@@ -30,6 +30,7 @@ jobs:
           touch .env
           echo DATABASE_URL=${DATABASE_URL} >> .env
           echo SHADOW_DATABASE_URL=${SHADOW_DATABASE_URL} >> .env
+          npx prisma generate
           npx prisma migrate dev
         env:
           DATABASE_URL: ${{ steps.create-branch.outputs.db_url}}/neondb
