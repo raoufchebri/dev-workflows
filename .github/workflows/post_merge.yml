@@ -39,13 +39,10 @@ jobs:
       - name: Run Prisma Migrate
         run: |
           touch .env
-          echo DATABASE_URL=${DATABASE_URL} >> .env
-          echo SHADOW_DATABASE_URL=${SHADOW_DATABASE_URL} >> .env
+          echo DATABASE_URL=${secrets.DATABASE_URL} >> .env
+          echo SHADOW_DATABASE_URL=${secrets.SHADOW_DATABASE_URL} >> .env
           npx prisma generate
           npx prisma migrate dev
-        env:
-          DATABASE_URL: postgres://${{ secrets.PGUSERNAME }}:${{ secrets.PGPASSWORD }}@${{ secrets.PGHOST }}/neondb
-          SHADOW_DATABASE_URL: postgres://${{ secrets.PGUSERNAME }}:${{ secrets.PGPASSWORD }}@${{ secrets.PGHOST }}/shadowdb
       
       - name: Deploy to Vercel
         id: deploy
