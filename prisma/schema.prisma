@@ -19,3 +19,9 @@ model shoes {
   color String
   image String
 }
+
+// model users {
+//   id Int @id @default(autoincrement())
+//   name String
+//   email String
+// }
