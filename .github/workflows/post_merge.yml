@@ -44,8 +44,8 @@ jobs:
           npx prisma generate
           npx prisma migrate dev
         env:
-          DATABASE_URL: ${{ secrets.PGUSERNAME }}:${{ secrets.PGPASSWORD }}@${{ secrets.PGHOST }}/neondb
-          SHADOW_DATABASE_URL: ${{ secrets.PGUSERNAME }}:${{ secrets.PGPASSWORD }}@${{ secrets.PGHOST }}/shadowdb
+          DATABASE_URL: postgres://${{ secrets.PGUSERNAME }}:${{ secrets.PGPASSWORD }}@${{ secrets.PGHOST }}/neondb
+          SHADOW_DATABASE_URL: postgres://${{ secrets.PGUSERNAME }}:${{ secrets.PGPASSWORD }}@${{ secrets.PGHOST }}/shadowdb
       
       - name: Deploy to Vercel
         id: deploy
