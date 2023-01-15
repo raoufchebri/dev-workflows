@@ -11,17 +11,17 @@ datasource db {
   shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
 }
 
-model User {
+model user {
   id    Int     @id @default(autoincrement())
   email String  @unique
   name  String?
 }
 
-model shoes {
-  id Int @id @default(autoincrement())
-  brand String
-  model String
-  description String
-  color String
-  image String
-}
+// model shoes {
+//   id Int @id @default(autoincrement())
+//   brand String
+//   model String
+//   description String
+//   color String
+//   image String
+// }
