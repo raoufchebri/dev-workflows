@@ -17,11 +17,11 @@ model user {
   name  String?
 }
 
-// model shoes {
-//   id Int @id @default(autoincrement())
-//   brand String
-//   model String
-//   description String
-//   color String
-//   image String
-// }
+model shoe {
+  id Int @id @default(autoincrement())
+  brand String
+  model String
+  description String
+  color String
+  image String
+}
