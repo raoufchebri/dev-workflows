@@ -25,3 +25,8 @@ model shoe {
   color String
   image String
 }
+
+model mytable {
+  id Int @id @default(autoincrement())
+  size String
+}
