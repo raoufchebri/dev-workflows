@@ -48,7 +48,7 @@ jobs:
       - name: Run Prisma Migrate
         run: |
           touch .env
-          echo DATABASE_URL=${{secrets.DATABASE_URL}}?connect_timeout=0 >> .env
+          echo DATABASE_URL=${{secrets.DATABASE_URL}}?connect_timeout=0&pgbouncer=false >> .env
           echo SHADOW_DATABASE_URL=${{secrets.SHADOW_DATABASE_URL}}?connect_timeout=0 >> .env
           npx prisma migrate deploy
 
