@@ -45,6 +45,11 @@
   "resolved" "https://registry.npmjs.org/@prisma/engines-version/-/engines-version-4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe.tgz"
   "version" "4.8.0-61.d6e67a83f971b175a593ccc12e15c4a757f93ffe"
 
+"@prisma/engines@4.9.0":
+  "integrity" "sha512-t1pt0Gsp+HcgPJrHFc+d/ZSAaKKWar2G/iakrE07yeKPNavDP3iVKPpfXP22OTCHZUWf7OelwKJxQgKAm5hkgw=="
+  "resolved" "https://registry.npmjs.org/@prisma/engines/-/engines-4.9.0.tgz"
+  "version" "4.9.0"
+
 "@swc/helpers@0.4.14":
   "integrity" "sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw=="
   "resolved" "https://registry.npmjs.org/@swc/helpers/-/helpers-0.4.14.tgz"
@@ -495,6 +500,13 @@
     "nanoid" "^3.3.4"
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
+
+"prisma@*", "prisma@^4.9.0":
+  "integrity" "sha512-bS96oZ5oDFXYgoF2l7PJ3Mp1wWWfLOo8B/jAfbA2Pn0Wm5Z/owBHzaMQKS3i1CzVBDWWPVnOohmbJmjvkcHS5w=="
+  "resolved" "https://registry.npmjs.org/prisma/-/prisma-4.9.0.tgz"
+  "version" "4.9.0"
+  dependencies:
+    "@prisma/engines" "4.9.0"
 
 "queue-microtask@^1.2.2":
   "integrity" "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
