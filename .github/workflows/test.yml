@@ -9,5 +9,5 @@ jobs:
         uses: neondatabase/delete-branch-by-name-action@main
         with:
           project_id: dark-bread-340804
-          branch_id: my_branch
+          branch_name: my_branch
           api_key: zvwaco8dznl6200h6rbgujp54ktpxndd9cn653h38jl9cm3hoefkoa3ybqa40z7r
