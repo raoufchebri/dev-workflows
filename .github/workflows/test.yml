@@ -1,5 +1,5 @@
 name: Neon and Vercel Preview
-on: [pull_request]
+on: [push]
 jobs:
   create-branch:
     permissions: write-all
