@@ -15,7 +15,7 @@ jobs:
           echo "pull_sha=${pull_sha}" >> $GITHUB_OUTPUT
           echo $pull_sha
       - name: Create Branch
-        uses: neondatabase/create-branch-action@v2
+        uses: neondatabase/create-branch-action@v3
         with:
           project_id: ${{ secrets.NEON_PROJECT_ID }}
           branch_name: ${{steps.get_pull_number.outputs.pull_sha}}
