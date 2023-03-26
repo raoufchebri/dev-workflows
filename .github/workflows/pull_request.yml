@@ -22,6 +22,7 @@ jobs:
           api_key: ${{ secrets.NEON_API_KEY }}
           username: ${{ secrets.PGUSERNAME }}
           password: ${{ secrets.PGPASSWORD }}
+          branch_name: "hello"
         id: create-branch
       - name: Checkout code
         uses: actions/checkout@v2
